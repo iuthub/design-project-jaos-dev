@@ -41,7 +41,7 @@ class Product extends Model
 
     public function getThumbsAttribute()
     {
-        $images = asset("uploads/thumb_".$this->images()->first()->name);
+        $images = asset("uploads/thumb_".$this->images()->first()['name']);
         return '<img src="' .$images.'" class="img-thumbnail" width="100" />';
     }
 
